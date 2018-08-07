@@ -9,6 +9,7 @@ class App extends React.Component {
                 <a>Hello World!</a>
             </div>
             <Nav titles={this.props.titles}/>
+            <TabContent/>
          </div>
       );
    }
@@ -19,7 +20,7 @@ class Nav extends React.Component{
         var values = this.props.titles.map(function(title, i){
             var href = "#"+title;
             return (
-                <li class="nav nav-item">
+                <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href={href}>{title}</a>
                 </li>
             );
@@ -33,6 +34,44 @@ class Nav extends React.Component{
         );
     }
 }
+
+class TabContent extends React.Component{
+    render(){
+        return(
+            <div class="tab-content">
+                <div id = "Home" class="container tab-pane active">
+                    <StrongAlert alerttype="success" message="Yet to come..."/>
+                </div>
+                <div id = "Profile" class="container tab-pane ">
+                    <StrongAlert alerttype="warning" message="Yet to come..."/>
+                </div>
+                <div id = "Statistics" class="container tab-pane ">
+                    <StrongAlert alerttype="primary" message="Yet to come..."/>
+                </div>
+                <div id = "Create" class="container tab-pane ">
+                    <StrongAlert alerttype="dark" message="Yet to come..."/>
+                </div>
+                <div id = "Request" class="container tab-pane ">
+                    <StrongAlert alerttype="danger" message="Yet to come..."/>
+                </div>
+            </div>
+        );
+    }
+}
+
+class StrongAlert extends React.Component{
+    render(){
+        var strAlert = "alert alert-"+this.props.alerttype;
+        return(
+            <div class={strAlert}>
+                <strong>
+                    {this.props.message}
+                </strong>
+            </div>
+        );
+    }
+}
+
 /*class App1 extends React.Component{
     render(){
         return(
