@@ -6,7 +6,7 @@ var config = {
    },
    devServer: {
       inline: true,
-      port: 8090
+      port: 8085
    },
    module: {
       rules: [
