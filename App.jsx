@@ -8,7 +8,7 @@ class App extends React.Component {
                 <h2>{this.props.heading}</h2>
                 <a>Hello World!</a>
             </div>
-            <Nav titles={['Home','Profile','Statistics','Create','Request']}/>
+            <Nav titles={this.props.titles}/>
          </div>
       );
    }
