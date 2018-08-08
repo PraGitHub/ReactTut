@@ -40,19 +40,19 @@ class TabContent extends React.Component{
         return(
             <div class="tab-content">
                 <div id = "Home" class="container tab-pane active">
-                    <StrongAlert alerttype="success" message="Yet to come..."/>
+                    <StrongAlert alerttype="success" message="Home | Yet to come..."/>
                 </div>
                 <div id = "Profile" class="container tab-pane ">
-                    <StrongAlert alerttype="warning" message="Yet to come..."/>
+                    <StrongAlert alerttype="warning" message="Profile | Yet to come..."/>
                 </div>
                 <div id = "Statistics" class="container tab-pane ">
-                    <StrongAlert alerttype="primary" message="Yet to come..."/>
+                    <StrongAlert alerttype="primary" message="Statistics | Yet to come..."/>
                 </div>
                 <div id = "Create" class="container tab-pane ">
-                    <StrongAlert alerttype="dark" message="Yet to come..."/>
+                    <StrongAlert alerttype="dark" message="Create | Yet to come..."/>
                 </div>
                 <div id = "Request" class="container tab-pane ">
-                    <StrongAlert alerttype="danger" message="Yet to come..."/>
+                    <StrongAlert alerttype="danger" message="Request | Yet to come..."/>
                 </div>
             </div>
         );
@@ -63,10 +63,13 @@ class StrongAlert extends React.Component{
     render(){
         var strAlert = "alert alert-"+this.props.alerttype;
         return(
-            <div class={strAlert}>
-                <strong>
-                    {this.props.message}
-                </strong>
+            <div>
+                <br/>
+                <div class={strAlert}>
+                    <strong>
+                        {this.props.message}
+                    </strong>
+                </div>
             </div>
         );
     }
